@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+# make heroku happy ( http://stackoverflow.com/questions/17550747/rails-4-enabled-rails-to-serve-static-assets-is-it-correct-on-heroku )
+ruby '1.9.3' 
+gem 'rails_12factor', group: :production
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
@@ -9,6 +13,7 @@ group :development, :test do
 end
 group :production do
   gem 'pg'
+  
 end
 
 group :development do
