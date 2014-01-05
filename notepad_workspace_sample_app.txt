@@ -1,0 +1,200 @@
+<NotepadPlus>
+    <Project name="sample_app">
+        <Folder name=".bundle">
+            <File name=".bundle\config" />
+            <File name=".bundle\install.log" />
+        </Folder>
+        <Folder name="app">
+            <Folder name="assets">
+                <Folder name="images">
+                    <File name="app\assets\images\.keep" />
+                </Folder>
+                <Folder name="javascripts">
+                    <File name="app\assets\javascripts\application.js" />
+                    <File name="app\assets\javascripts\pages.js.coffee" />
+                </Folder>
+                <Folder name="stylesheets">
+                    <File name="app\assets\stylesheets\application.css" />
+                    <File name="app\assets\stylesheets\pages.css.scss" />
+                </Folder>
+            </Folder>
+            <Folder name="controllers">
+                <Folder name="concerns">
+                    <File name="app\controllers\concerns\.keep" />
+                </Folder>
+                <File name="app\controllers\application_controller.rb" />
+                <File name="app\controllers\pages_controller.rb" />
+            </Folder>
+            <Folder name="helpers">
+                <File name="app\helpers\application_helper.rb" />
+                <File name="app\helpers\pages_helper.rb" />
+            </Folder>
+            <Folder name="mailers">
+                <File name="app\mailers\.keep" />
+            </Folder>
+            <Folder name="models">
+                <Folder name="concerns">
+                    <File name="app\models\concerns\.keep" />
+                </Folder>
+                <File name="app\models\.keep" />
+            </Folder>
+            <Folder name="views">
+                <Folder name="layouts">
+                    <File name="app\views\layouts\application.html.erb" />
+                </Folder>
+                <Folder name="pages">
+                    <File name="app\views\pages\about.html.erb" />
+                    <File name="app\views\pages\contact.html.erb" />
+                    <File name="app\views\pages\help.html.erb" />
+                    <File name="app\views\pages\home.html.erb" />
+                </Folder>
+            </Folder>
+        </Folder>
+        <Folder name="autotest">
+            <File name="autotest\discover.rb" />
+        </Folder>
+        <Folder name="bin">
+            <File name="bin\bundle" />
+            <File name="bin\rails" />
+            <File name="bin\rake" />
+        </Folder>
+        <Folder name="config">
+            <Folder name="environments">
+                <File name="config\environments\development.rb" />
+                <File name="config\environments\production.rb" />
+                <File name="config\environments\test.rb" />
+            </Folder>
+            <Folder name="initializers">
+                <File name="config\initializers\backtrace_silencers.rb" />
+                <File name="config\initializers\filter_parameter_logging.rb" />
+                <File name="config\initializers\inflections.rb" />
+                <File name="config\initializers\mime_types.rb" />
+                <File name="config\initializers\secret_token.rb" />
+                <File name="config\initializers\session_store.rb" />
+                <File name="config\initializers\wrap_parameters.rb" />
+            </Folder>
+            <Folder name="locales">
+                <File name="config\locales\en.yml" />
+            </Folder>
+            <File name="config\application.rb" />
+            <File name="config\boot.rb" />
+            <File name="config\database.yml" />
+            <File name="config\environment.rb" />
+            <File name="config\routes.rb" />
+        </Folder>
+        <Folder name="db">
+            <File name="db\development.sqlite3" />
+            <File name="db\seeds.rb" />
+            <File name="db\test.sqlite3" />
+        </Folder>
+        <Folder name="lib">
+            <Folder name="assets">
+                <File name="lib\assets\.keep" />
+            </Folder>
+            <Folder name="tasks">
+                <File name="lib\tasks\.keep" />
+            </Folder>
+        </Folder>
+        <Folder name="log">
+            <File name="log\.keep" />
+            <File name="log\development.log" />
+            <File name="log\test.log" />
+        </Folder>
+        <Folder name="public">
+            <File name="public\404.html" />
+            <File name="public\422.html" />
+            <File name="public\500.html" />
+            <File name="public\favicon.ico" />
+            <File name="public\robots.txt" />
+        </Folder>
+        <Folder name="spec">
+            <Folder name="controllers">
+                <File name="spec\controllers\pages_controller_spec.rb" />
+            </Folder>
+            <File name="spec\spec_helper.rb" />
+        </Folder>
+        <Folder name="tmp">
+            <Folder name="cache">
+                <Folder name="assets">
+                    <Folder name="development">
+                        <Folder name="sass">
+                            <Folder name="68d55038ceb01bacb61f247ad9a5f3cc411bb01e">
+                                <File name="tmp\cache\assets\development\sass\68d55038ceb01bacb61f247ad9a5f3cc411bb01e\pages.css.scssc" />
+                            </Folder>
+                        </Folder>
+                        <Folder name="sprockets">
+                            <File name="tmp\cache\assets\development\sprockets\13fe41fee1fe35b49d145bcc06610705" />
+                            <File name="tmp\cache\assets\development\sprockets\1ba2331aab000dc355521d376087bf32" />
+                            <File name="tmp\cache\assets\development\sprockets\2acc5707175340e2305db36b762b5b55" />
+                            <File name="tmp\cache\assets\development\sprockets\2f5173deea6c795b8fdde723bb4b63af" />
+                            <File name="tmp\cache\assets\development\sprockets\357970feca3ac29060c1e3861e2c0953" />
+                            <File name="tmp\cache\assets\development\sprockets\3e3027ed026b57b275c7a0fc83b9af40" />
+                            <File name="tmp\cache\assets\development\sprockets\51c8a746fbda0b23193f2e5adbad45b0" />
+                            <File name="tmp\cache\assets\development\sprockets\567d9179ee44d6ee39d5bc4364d603ac" />
+                            <File name="tmp\cache\assets\development\sprockets\58d13fa8238ddbe40924e2b2b8e2b892" />
+                            <File name="tmp\cache\assets\development\sprockets\5a4f6f3b789e290307f437ab84b86e44" />
+                            <File name="tmp\cache\assets\development\sprockets\8d467b2390a5eab42a9d2d3d89792e32" />
+                            <File name="tmp\cache\assets\development\sprockets\8f2511830f6e103d24928dac99a5cf5a" />
+                            <File name="tmp\cache\assets\development\sprockets\9f906a3814023ab5f2ffd9e8f08d1806" />
+                            <File name="tmp\cache\assets\development\sprockets\b7cf1ee5c56fa85d2cf039f2541df071" />
+                            <File name="tmp\cache\assets\development\sprockets\cff67399d5848f68362cb66e4ab51fc4" />
+                            <File name="tmp\cache\assets\development\sprockets\cffd775d018f68ce5dba1ee0d951a994" />
+                            <File name="tmp\cache\assets\development\sprockets\d0966383bb2e84039aa98af54b989594" />
+                            <File name="tmp\cache\assets\development\sprockets\d771ace226fc8215a3572e0aa35bb0d6" />
+                            <File name="tmp\cache\assets\development\sprockets\f5f738b65b700d4d150982435be7b758" />
+                            <File name="tmp\cache\assets\development\sprockets\f7cbd26ba1d28d48de824f0e94586655" />
+                            <File name="tmp\cache\assets\development\sprockets\ff97c0297f95baa7b5a5c5dbe183e2e1" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="test">
+                        <Folder name="sass">
+                            <Folder name="68d55038ceb01bacb61f247ad9a5f3cc411bb01e">
+                                <File name="tmp\cache\assets\test\sass\68d55038ceb01bacb61f247ad9a5f3cc411bb01e\pages.css.scssc" />
+                            </Folder>
+                        </Folder>
+                        <Folder name="sprockets">
+                            <File name="tmp\cache\assets\test\sprockets\13fe41fee1fe35b49d145bcc06610705" />
+                            <File name="tmp\cache\assets\test\sprockets\1ba2331aab000dc355521d376087bf32" />
+                            <File name="tmp\cache\assets\test\sprockets\2acc5707175340e2305db36b762b5b55" />
+                            <File name="tmp\cache\assets\test\sprockets\2f5173deea6c795b8fdde723bb4b63af" />
+                            <File name="tmp\cache\assets\test\sprockets\357970feca3ac29060c1e3861e2c0953" />
+                            <File name="tmp\cache\assets\test\sprockets\3e3027ed026b57b275c7a0fc83b9af40" />
+                            <File name="tmp\cache\assets\test\sprockets\567d9179ee44d6ee39d5bc4364d603ac" />
+                            <File name="tmp\cache\assets\test\sprockets\58d13fa8238ddbe40924e2b2b8e2b892" />
+                            <File name="tmp\cache\assets\test\sprockets\5a4f6f3b789e290307f437ab84b86e44" />
+                            <File name="tmp\cache\assets\test\sprockets\8d467b2390a5eab42a9d2d3d89792e32" />
+                            <File name="tmp\cache\assets\test\sprockets\8f2511830f6e103d24928dac99a5cf5a" />
+                            <File name="tmp\cache\assets\test\sprockets\cff67399d5848f68362cb66e4ab51fc4" />
+                            <File name="tmp\cache\assets\test\sprockets\cffd775d018f68ce5dba1ee0d951a994" />
+                            <File name="tmp\cache\assets\test\sprockets\d0966383bb2e84039aa98af54b989594" />
+                            <File name="tmp\cache\assets\test\sprockets\d771ace226fc8215a3572e0aa35bb0d6" />
+                            <File name="tmp\cache\assets\test\sprockets\f7cbd26ba1d28d48de824f0e94586655" />
+                        </Folder>
+                    </Folder>
+                </Folder>
+            </Folder>
+            <Folder name="pids" />
+            <Folder name="sessions" />
+            <Folder name="sockets" />
+        </Folder>
+        <Folder name="vendor">
+            <Folder name="assets">
+                <Folder name="javascripts">
+                    <File name="vendor\assets\javascripts\.keep" />
+                </Folder>
+                <Folder name="stylesheets">
+                    <File name="vendor\assets\stylesheets\.keep" />
+                </Folder>
+            </Folder>
+        </Folder>
+        <File name=".gitignore" />
+        <File name=".rspec" />
+        <File name="config.ru" />
+        <File name="Gemfile" />
+        <File name="Gemfile.lock" />
+        <File name="notepad_workspace_sample_app.txt" />
+        <File name="Rakefile" />
+        <File name="README.rdoc" />
+    </Project>
+    <Project name="Project Name" />
+</NotepadPlus>
