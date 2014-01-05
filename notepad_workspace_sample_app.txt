@@ -106,6 +106,64 @@
             <File name="public\500.html" />
             <File name="public\favicon.ico" />
             <File name="public\robots.txt" />
+            <Folder name="images">
+                <File name="public\images\logo.png" />
+            </Folder>
+            <Folder name="stylesheets">
+                <Folder name="blueprint">
+                    <Folder name="plugins">
+                        <Folder name="buttons">
+                            <Folder name="icons">
+                                <File name="public\stylesheets\blueprint\plugins\buttons\icons\cross.png" />
+                                <File name="public\stylesheets\blueprint\plugins\buttons\icons\key.png" />
+                                <File name="public\stylesheets\blueprint\plugins\buttons\icons\tick.png" />
+                            </Folder>
+                            <File name="public\stylesheets\blueprint\plugins\buttons\readme.txt" />
+                            <File name="public\stylesheets\blueprint\plugins\buttons\screen.css" />
+                        </Folder>
+                        <Folder name="fancy-type">
+                            <File name="public\stylesheets\blueprint\plugins\fancy-type\readme.txt" />
+                            <File name="public\stylesheets\blueprint\plugins\fancy-type\screen.css" />
+                        </Folder>
+                        <Folder name="link-icons">
+                            <Folder name="icons">
+                                <File name="public\stylesheets\blueprint\plugins\link-icons\icons\doc.png" />
+                                <File name="public\stylesheets\blueprint\plugins\link-icons\icons\email.png" />
+                                <File name="public\stylesheets\blueprint\plugins\link-icons\icons\external.png" />
+                                <File name="public\stylesheets\blueprint\plugins\link-icons\icons\feed.png" />
+                                <File name="public\stylesheets\blueprint\plugins\link-icons\icons\im.png" />
+                                <File name="public\stylesheets\blueprint\plugins\link-icons\icons\lock.png" />
+                                <File name="public\stylesheets\blueprint\plugins\link-icons\icons\pdf.png" />
+                                <File name="public\stylesheets\blueprint\plugins\link-icons\icons\visited.png" />
+                                <File name="public\stylesheets\blueprint\plugins\link-icons\icons\xls.png" />
+                            </Folder>
+                            <File name="public\stylesheets\blueprint\plugins\link-icons\readme.txt" />
+                            <File name="public\stylesheets\blueprint\plugins\link-icons\screen.css" />
+                        </Folder>
+                        <Folder name="rtl">
+                            <File name="public\stylesheets\blueprint\plugins\rtl\readme.txt" />
+                            <File name="public\stylesheets\blueprint\plugins\rtl\screen.css" />
+                        </Folder>
+                    </Folder>
+                    <Folder name="src">
+                        <File name="public\stylesheets\blueprint\src\forms.css" />
+                        <File name="public\stylesheets\blueprint\src\grid.css" />
+                        <File name="public\stylesheets\blueprint\src\grid.png" />
+                        <File name="public\stylesheets\blueprint\src\ie.css" />
+                        <File name="public\stylesheets\blueprint\src\print.css" />
+                        <File name="public\stylesheets\blueprint\src\reset.css" />
+                        <File name="public\stylesheets\blueprint\src\typography.css" />
+                    </Folder>
+                    <File name="public\stylesheets\blueprint\ie.css" />
+                    <File name="public\stylesheets\blueprint\print.css" />
+                    <File name="public\stylesheets\blueprint\screen.css" />
+                </Folder>
+            </Folder>
+            <File name="public\404.html" />
+            <File name="public\422.html" />
+            <File name="public\500.html" />
+            <File name="public\favicon.ico" />
+            <File name="public\robots.txt" />
         </Folder>
         <Folder name="spec">
             <Folder name="controllers">
@@ -195,6 +253,7 @@
         <File name="notepad_workspace_sample_app.txt" />
         <File name="Rakefile" />
         <File name="README.rdoc" />
+        <File name="example_user.rb" />
     </Project>
     <Project name="Project Name" />
 </NotepadPlus>
