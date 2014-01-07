@@ -7,6 +7,8 @@ gem 'rails_12factor', group: :production
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'gravatar_image_tag'
+
 # Use sqlite3 as the database for Active Record
 group :development, :test do
   gem 'sqlite3'
@@ -18,10 +20,12 @@ end
 
 group :development do
   gem 'rspec-rails', '~> 2.14.1'
+  gem 'annotate'
 end
 group :test do
   gem 'rspec', '~> 2.14.1'
   gem 'webrat', '0.7.1'
+  gem 'factory_girl_rails'
 end
 
 # Use SCSS for stylesheets
