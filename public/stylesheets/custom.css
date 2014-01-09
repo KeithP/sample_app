@@ -159,3 +159,7 @@ div.field, div.actions {
 	font-size: 12px;
 	list-style: square;
 }
+/* KP added for incidental text, eg version. */
+.incidental {
+	color: #09c;
+}

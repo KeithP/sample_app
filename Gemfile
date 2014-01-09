@@ -25,7 +25,7 @@ end
 group :test do
   gem 'rspec', '~> 2.14.1'
   gem 'webrat', '0.7.1'
-  gem 'factory_girl_rails'
+  gem 'factory_girl_rails', '~> 4.0'
 end
 
 # Use SCSS for stylesheets

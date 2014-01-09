@@ -44,7 +44,7 @@ describe UsersController do
 	
 		before(:each) do
 			# FactoryGirl "create" returns a User instance that's saved
-			@user = create(:user)
+			@user = FactoryGirl.create(:user)
 		end
 		
 		it "should be successful" do 
@@ -111,9 +111,11 @@ describe UsersController do
 				post :create, :user => @attr
 				flash[:success].should =~ /welcome to the sample app/i
 			end
-		
-		end
-		
+			
+			it "should sign the user in" do
+				post :create, :user => @attr
+				controller.should be_signed_in
+			end		
+		end		
 	end
-	
 end
