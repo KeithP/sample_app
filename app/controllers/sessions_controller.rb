@@ -1,5 +1,10 @@
 class SessionsController < ApplicationController
-  
+  force_ssl if: :ssl_configured? 
+	
+	def ssl_configured?
+    Rails.env.production?
+  end
+	
 	def new
 		@title = "Sign in" 
   end

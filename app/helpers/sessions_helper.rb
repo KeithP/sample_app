@@ -1,7 +1,12 @@
 module SessionsHelper
 
+# note: using cookies per below permanently leaves teh user signed in 
+# where as the commented out session lines is the alternative that 
+# - signs out the user on closing the browser
+
 	def sign_in(user)
 		cookies.permanent.signed[:remember_token] = [user.id, user.salt]
+		#session[:remember_token] = [user.id, user.salt]
 		current_user = user
 	end	
 	
@@ -19,6 +24,7 @@ module SessionsHelper
 	
 	def sign_out
 		cookies.delete(:remember_token)
+		#session[:remember_token] = nil
 		current_user = nil	
 	end
 	
@@ -30,5 +36,6 @@ module SessionsHelper
 		
 		def remember_token
 			cookies.signed[:remember_token] || [nil, nil]
+			#session[:remember_token] || [nil, nil]
 		end
 end
