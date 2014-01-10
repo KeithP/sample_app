@@ -1,6 +1,7 @@
 class SessionsController < ApplicationController
-  force_ssl if: :ssl_configured? 
-	
+  # this keeps ssl on for all pages. to fix for non ssl pages: force downgrade for named links in helpers, 
+	# eg: link_to('Events', events_url(:protocol => 'http')) 
+	force_ssl if: :ssl_configured? 	
 	def ssl_configured?
     Rails.env.production?
   end
@@ -17,7 +18,7 @@ class SessionsController < ApplicationController
 			render 'new'
 		else
 			sign_in user
-			redirect_to user
+			redirect_back_or user
 		end
 	end
 	
