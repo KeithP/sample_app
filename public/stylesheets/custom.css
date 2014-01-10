@@ -163,3 +163,10 @@ div.field, div.actions {
 .incidental {
 	color: #09c;
 }
+/* user index */
+ul.users {
+	margin-top: 1em;
+}
+.users li {
+	list-style: none;
+}

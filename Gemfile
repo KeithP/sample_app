@@ -8,6 +8,7 @@ gem 'rails_12factor', group: :production
 gem 'rails', '4.0.0'
 
 gem 'gravatar_image_tag'
+gem 'will_paginate'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
@@ -21,6 +22,7 @@ end
 group :development do
   gem 'rspec-rails', '~> 2.14.1'
   gem 'annotate'
+  gem 'faker' # => generate user test data
 end
 group :test do
   gem 'rspec', '~> 2.14.1'
