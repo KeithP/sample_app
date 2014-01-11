@@ -4,6 +4,10 @@ module SessionsHelper
 # where as the commented out session lines is the alternative that 
 # - signs out the user on closing the browser
 
+	def authenticate
+		deny_access unless signed_in?
+	end
+		
 	def sign_in(user)
 		cookies.permanent.signed[:remember_token] = [user.id, user.salt]
 		#session[:remember_token] = [user.id, user.salt]
