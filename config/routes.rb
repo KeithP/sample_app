@@ -7,7 +7,7 @@ SampleApp::Application.routes.draw do
 	root 'pages#home'
 	match '/signup', :to => 'users#new', :via => :get
 	match '/signin', :to => 'sessions#new', :via => :get
-	match '/signout', :to => 'sessions#destroy', :via => :get
+	match '/signout', :to => 'sessions#destroy', :via => [:get, :delete]
 	match '/contact', :to => 'pages#contact', :via => :get
 	match '/about', :to => 'pages#about', :via => :get
 	match '/help', :to => 'pages#help', :via => :get

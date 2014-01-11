@@ -1,7 +1,7 @@
 module ApplicationHelper
 
 	def version
-		"version 0.0.0.5"
+		"version 0.0.0.5a"
 	end
 
 	# return a title on a per-page basis
