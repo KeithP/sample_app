@@ -142,4 +142,45 @@ describe User do
 			@user.should be_admin
 		end
 	end		
+
+	describe "micropost associations" do
+		
+		before(:each) do
+			@user = User.create(@attr)
+			@mpdayold = create(:micropost, :user => @user, :created_at => 1.day.ago)
+			@mphourold = create(:micropost, :user => @user, :created_at => 1.hour.ago)
+		end
+		
+		it "should have a microposts attribute" do
+			@user.should respond_to(:microposts)
+		end
+		
+		it "should have the right microposts in the right order" do
+			@user.microposts.should == [@mphourold, @mpdayold]
+		end
+		
+		it "should destroy associated microposts" do
+			@user.destroy
+			[@mphourold, @mpdayold].each do |micropost|
+				Micropost.find_by_id(micropost.id).should be_nil
+			end
+		end
+		
+		describe "status feed" do
+		
+			it "should have a feed" do
+				@user.should respond_to(:feed)
+			end
+			
+			it "should include the users microposts" do
+				@user.feed.include?(@mphourold).should be_true
+				@user.feed.include?(@mpdayold).should be_true
+			end
+			
+			it "should not include a different users micrioposts" do
+				mp3 = create(:micropost, :user => create(:user, :email => generate(:email)))
+				@user.feed.include?(mp3).should be_false
+			end
+		end
+	end
 end

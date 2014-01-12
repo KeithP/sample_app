@@ -1,0 +1,15 @@
+<%= form_for @micropost do |f| %>
+
+	<%= render 'shared/error_messages', :object => f.object %>
+	<div class="field">
+		<%= f.text_area :content, 
+			:onkeyup => "javascript:$('#chars-remaining').val((140 - this.value.length) + ' Chars Remaining')" %>
+	</div>
+
+	<div class="action">
+		<%= f.submit "Submit" %>
+		<input id="chars-remaining" class="field"
+			placeholder="140 Chars Remaining" readonly /> 
+	</div>
+
+<% end %>

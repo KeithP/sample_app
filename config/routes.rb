@@ -1,7 +1,11 @@
 SampleApp::Application.routes.draw do
 
-	resources :users
+	resources :users do
+		# nested route: eg /users/1/microposts
+		resources :microposts, :only => [:index]
+	end
 	resources :sessions, :only => [:new, :create, :destroy]
+	resources :microposts, :only => [:create, :destroy]
 	
 # create named routes, eg about_path and about_url
 	root 'pages#home'

@@ -1,0 +1,20 @@
+Running `rake add_column :users, :admin, :boolean, :default =` attached to terminal... up, run.7163
+rake aborted!
+cannot load such file -- faker
+/app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require'
+/app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `block in require'
+/app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+/app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:228:in `require'
+/app/lib/tasks/sample_data.rake:1:in `<top (required)>'
+/app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+/app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `block in load'
+/app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:213:in `load_dependency'
+/app/vendor/bundle/ruby/1.9.1/gems/activesupport-4.0.0/lib/active_support/dependencies.rb:222:in `load'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.0/lib/rails/engine.rb:641:in `block in run_tasks_blocks'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.0/lib/rails/engine.rb:641:in `each'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.0/lib/rails/engine.rb:641:in `run_tasks_blocks'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.0/lib/rails/application.rb:244:in `run_tasks_blocks'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.0/lib/rails/engine.rb:446:in `load_tasks'
+/app/vendor/bundle/ruby/1.9.1/gems/railties-4.0.0/lib/rails/railtie/configurable.rb:30:in `method_missing'
+/app/Rakefile:6:in `<top (required)>'
+(See full trace by running task with --trace)

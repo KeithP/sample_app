@@ -50,7 +50,7 @@ describe "Users" do
 		end
 		describe "success" do
 			it "should sign a user in and out" do
-				user = FactoryGirl.create(:user)
+				user = create(:user)
 				integration_sign_in(user)
 				controller.should be_signed_in
 				click_link "Sign out"

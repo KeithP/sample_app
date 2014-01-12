@@ -44,7 +44,7 @@ describe UsersController do
 	
 		before(:each) do
 			# FactoryGirl "create" returns a User instance that's saved
-			@user = FactoryGirl.create(:user)
+			@user = create(:user)
 		end
 		
 		it "should be successful" do 
@@ -61,6 +61,14 @@ describe UsersController do
 			get :show, :id => @user
 			response.should have_selector("title", :content => @user.name)
 		end
+		
+		it "should show the user's microposts" do
+			mp1 = create(:micropost, :user => @user, :content => "Foo bar")
+			mp2 = create(:micropost, :user => @user, :content => "Baz brar")
+			get :show, :id => @user
+			response.should have_selector("span.content", :content => mp1.content)
+			response.should have_selector("span.content", :content => mp2.content)
+		end		
 	end
 	
 	describe "POST 'create'" do
@@ -147,7 +155,7 @@ describe UsersController do
 	describe "PUT 'update'" do
 		
 		before(:each) do
-			@user = FactoryGirl.create(:user)
+			@user = create(:user)
 			test_sign_in(@user)
 		end
 		
@@ -198,7 +206,7 @@ describe UsersController do
 	describe "authentication of edit/update pages" do
 		
 		before(:each) do
-			@user = FactoryGirl.create(:user)
+			@user = create(:user)
 			# user is NOT signed in 
 		end
 		
@@ -218,7 +226,7 @@ describe UsersController do
 		describe "for signed-in users" do
 		
 			before(:each) do
-				wrong_user = FactoryGirl.create(:user, :email => "user@example.net")
+				wrong_user = create(:user, :email => "user@example.net")
 				test_sign_in(wrong_user)
 			end
 			
