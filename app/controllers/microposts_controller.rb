@@ -3,8 +3,7 @@ class MicropostsController < ApplicationController
 	before_filter :authorized_user, :only => :destroy
 	
 	def index
-		@microposts = current_user.microposts.paginate(:page => params[:page])	
-		
+		@microposts = current_user.microposts.paginate(:page => params[:page])			
 	end
 	
 	
