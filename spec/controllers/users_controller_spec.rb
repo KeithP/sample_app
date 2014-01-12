@@ -155,7 +155,7 @@ describe UsersController do
 	describe "PUT 'update'" do
 		
 		before(:each) do
-			@user = FactoryGirl.create(:user)
+			@user = create(:user)
 			test_sign_in(@user)
 		end
 		
@@ -206,7 +206,7 @@ describe UsersController do
 	describe "authentication of edit/update pages" do
 		
 		before(:each) do
-			@user = FactoryGirl.create(:user)
+			@user = create(:user)
 			# user is NOT signed in 
 		end
 		
@@ -226,7 +226,7 @@ describe UsersController do
 		describe "for signed-in users" do
 		
 			before(:each) do
-				wrong_user = FactoryGirl.create(:user, :email => "user@example.net")
+				wrong_user = create(:user, :email => "user@example.net")
 				test_sign_in(wrong_user)
 			end
 			
