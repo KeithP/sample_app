@@ -8,7 +8,7 @@ class MicropostsController < ApplicationController
 	
 	
 	def create
-		@micropost = current_user.microposts.build(user_params)
+		@micropost = current_user.microposts.build(micropost_params)
 		if @micropost.save
 			flash[:success] = "Micropost created!"
 			redirect_to root_path
@@ -31,7 +31,7 @@ class MicropostsController < ApplicationController
 		end
 	
 		## new in rails 4 - replaces model: attr_accessible :name, :email etc
-		def user_params
+		def micropost_params
 			params.require(:micropost).permit(:content)
 		end
 end

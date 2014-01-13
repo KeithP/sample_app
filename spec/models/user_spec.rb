@@ -177,9 +177,16 @@ describe User do
 				@user.feed.include?(@mpdayold).should be_true
 			end
 			
-			it "should not include a different users micrioposts" do
+			it "should not include a different users microposts" do
 				mp3 = create(:micropost, :user => create(:user, :email => generate(:email)))
 				@user.feed.include?(mp3).should be_false
+			end
+			
+			it "should include the microposts of followed users" do
+				followed = create(:user, :email => generate(:email))
+				mp3 = create(:micropost, :user => followed)
+				@user.follow!(followed)
+				@user.feed.should include(mp3)
 			end
 		end
 	end

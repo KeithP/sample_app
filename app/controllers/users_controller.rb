@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-	before_filter :authenticate, 	:only => [:index, :edit, :update, :destroy]
+	before_filter :authenticate, 	:except => [:show, :new, :create]
 	before_filter :correct_user, 	:only => [:edit, :update]
 	before_filter :admin_user, 		:only => :destroy
 	before_filter :not_signed_in, :only => [:create, :new]
@@ -13,6 +13,7 @@ class UsersController < ApplicationController
 		@title = "All users"
 		@users = User.paginate(:page => params[:page])	
 	end
+	
 	def show
 		@user = User.find(params[:id])
 		@microposts = @user.microposts.paginate(:page => params[:page])
@@ -59,7 +60,21 @@ class UsersController < ApplicationController
 		end
 		redirect_to users_path
 	end
-  
+
+	def following
+		@title = "Following"
+		@user = User.find(params[:id])
+		@users = @user.following.paginate(:page => params[:page])
+		render 'show_follow'
+	end
+	
+	def followers
+		@title = "Followers"
+		@user = User.find(params[:id])
+		@users = @user.followers.paginate(:page => params[:page])
+		render 'show_follow'		
+	end
+	
   private  
 		
 		def not_signed_in
