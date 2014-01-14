@@ -13,6 +13,11 @@ describe Relationship do
 		@relationship.save!
 	end
 	
+	it "should be destroyed when the follower is destroyed" do
+		@follower.destroy!
+		Relationship.find_by_id(@relationship).should be_nil
+	end		
+	
 	describe "follow methods" do
 	
 		before(:each) do

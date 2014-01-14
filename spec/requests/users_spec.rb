@@ -58,4 +58,27 @@ describe "Users" do
 			end
 		end		
 	end
+
+	describe "following and unfollowing a user" do
+		it "should follow a user" do
+			user = create(:user)
+			integration_sign_in(user)
+			user_followed = create(:user, :email => generate(:email))
+			visit user_path user_followed
+			click_button # to follow user
+			response.should have_selector("a", :href => followers_user_path(user_followed),
+																					:content => "1 follower")
+		end
+		it "should unfollow a user" do
+			user = create(:user)
+			integration_sign_in(user)
+			user_followed = create(:user, :email => generate(:email))
+			visit user_path user_followed
+			2.times do 
+				click_button # to follow then unfollow user
+			end
+			response.should have_selector("a", :href => followers_user_path(user_followed),
+																					:content => "0 followers")																					
+		end			
+	end
 end
