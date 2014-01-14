@@ -177,10 +177,68 @@ describe User do
 				@user.feed.include?(@mpdayold).should be_true
 			end
 			
-			it "should not include a different users micrioposts" do
+			it "should not include a different users microposts" do
 				mp3 = create(:micropost, :user => create(:user, :email => generate(:email)))
 				@user.feed.include?(mp3).should be_false
 			end
+			
+			it "should include the microposts of followed users" do
+				followed = create(:user, :email => generate(:email))
+				mp3 = create(:micropost, :user => followed)
+				@user.follow!(followed)
+				@user.feed.should include(mp3)
+			end
 		end
 	end
+	
+	describe "relationships" do
+	
+		before(:each) do
+			@user = User.create(@attr)
+			@followed = create(:user)
+		end
+		
+		it "should have a relationships method" do
+			@user.should respond_to(:relationships)
+		end
+		
+		it "should have a following method" do
+			@user.should respond_to(:following) 
+		end
+		it "should have a following? method" do
+			@user.should respond_to(:following?) 
+		end
+		it "should have a follow! method" do
+			@user.should respond_to(:follow!) 
+		end
+		it "should follow another user" do
+			@user.follow!(@followed)
+			@user.should be_following(@followed) 
+		end
+		it "should include the followed user in the following array" do
+			@user.follow!(@followed)
+			@user.following.should include(@followed)
+		end
+		it "should have an unfollow! method" do
+			@followed.should respond_to(:unfollow!)
+		end
+		it "should unfollow a user" do
+			@user.follow!(@followed)
+			@user.unfollow!(@followed)
+			@user.should_not be_following(@followed)
+		end
+		
+		it "should have a revers_relationships method" do
+			@user.should respond_to(:reverse_relationships)
+		end
+		
+		it "should have a followers method" do
+			@user.should respond_to(:followers)
+		end
+		
+		it "should include the follower in the followers array" do
+			@user.follow!(@followed)
+			@followed.followers.should include(@user)
+		end
+	end	
 end

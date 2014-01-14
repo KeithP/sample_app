@@ -37,4 +37,34 @@ describe Micropost do
 			@user.microposts.build(:content => "a" * 141).should_not be_valid
 		end
 	end	
+
+	describe "from_users_followed_by" do
+	
+		before(:each) do
+			@other_user = create(:user, :email => generate(:email))
+			@yet_other_user = create(:user, :email => generate(:email))
+			
+			@user_post = @user.microposts.create!(:content => "foo")
+			@other_user_post = @other_user.microposts.create!(:content => "foo")
+			@yet_other_user_post = @yet_other_user.microposts.create!(:content => "foo")
+			
+			@user.follow!(@other_user)
+		end
+		
+		it "should have a from_users_followed_by class method" do
+			Micropost.should respond_to(:from_users_followed_by)
+		end
+		
+		it "should include the followed users microposts" do
+			Micropost.from_users_followed_by(@user).should include(@other_user_post)
+		end
+		
+		it "should include the users own microposts" do
+			Micropost.from_users_followed_by(@user).should include(@user_post)
+		end
+		
+		it "should not include an unfollowed user's microposts" do
+			Micropost.from_users_followed_by(@user).should_not include(@yet_other_user_post)
+		end
+	end		
 end
